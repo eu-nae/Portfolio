@@ -1,0 +1,196 @@
+@charset "UTF-8";
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css); 
+
+*{margin: 0; padding: 0; font-family:'Noto Sans KR';}
+ul, li{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+
+.inner{width: 1400px; height: 900px; margin: 0 auto;}
+
+section{width: 100%; height: 900px;}
+h2{font-family:'Noto Sans KR', sans-serif; font-weight: 500; font-size: 55px; margin: 50px 70px 30px;}
+h2>span{color: #F44A4A; font-size: 60px;}
+
+header{position: fixed; top: 0; left: 0; width: 100%; height: 100px; z-index: 99999999999;
+display: none;
+}
+header nav{position: absolute; top: 50%; right: 10%; transform: translateY(-50%);}
+header nav ul{display: flex;}
+header nav ul li{margin-left: 50px;}
+header nav ul li a{display: block; color: #333; font-size: 20px; font-family: 'Noto Sans KR'; font-weight: 500;}
+
+section{position: relative;}
+
+
+/* main */
+
+
+section#main{background: #d3d3d3;}
+section#main h1{position: absolute; top: 380px; font-size: 100px; line-height: 110px; color: #F44A4A; text-shadow: -1px 0px #F44A4A, 0px 1px #F44A4A, 1px 0px #F44A4A, 0px -1px #F44A4A; z-index: 99999;}
+section#main h1 span{color: #d3d3d3; text-shadow: -2px 0px #F44A4A, 0px 2px #F44A4A, 2px 0px #F44A4A, 0px -2px #F44A4A;}
+
+section#main .inner{position: relative;}
+section#main ul{z-index: -2222;}
+section#main ul li{position: absolute;}
+section#main ul li:nth-child(1){top: -200px; right: -200px;}
+section#main .inner ul li:nth-child(2){top: 60px; right: 50px;}
+section#main .inner ul li:nth-child(3){top: 320px; right: -60px; }
+section#main .inner ul li:nth-child(4){bottom: 10px; left: -200px;}
+section#main .inner ul li:nth-child(5){bottom: -200px; left: 250px;}
+
+/* 돌리는 애니메이션 */
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(359deg); }
+}
+@keyframes roReverse {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-359deg); }
+}
+
+/* 원에 애니메이션 속성 추가 */
+section#main .inner ul li {
+    animation: rotate 25s infinite linear;
+}
+section#main .inner ul li:nth-child(2),
+section#main .inner ul li:nth-child(4) {
+    animation: roReverse 30s infinite linear;
+}
+
+
+/* about */
+
+
+section#about{position: relative;}
+section#about::before{content: ""; width: 1000px; height: 1000px; position: absolute; top: 0; left: 0; background-image: url(../img/aboutbg1.png); background-size: cover; z-index: 3;}
+section#about::after{content: ""; width: 1000px; height: 1000px; position: absolute; bottom: 0; right: 0; background-image: url(../img/aboutbg2.png); background-size: cover; z-index: 3;}
+
+section#about .myabout {overflow:hidden; margin: 40px 0;}
+section#about .myabout li{float: left;}
+section#about .myabout li .myPic{width: 250px; height: 250px; border-radius: 50%; border: 1px dashed red; background-color: #fff; display: inline-block; margin-left: 120px; overflow: hidden; position: relative; z-index: 99999;}
+
+section#about .myabout li .myPic img{width: 200px; padding-left: 25px; padding-top: 20px; opacity: 1;}
+
+section#about .myabout li.Atext{height: 250px; display: inline-block; margin-left: 100px; margin-top: 10px; font-weight: 500; font-size: 30px; line-height: 60px; color: #F44A4A;}
+
+
+section#about .information {overflow: hidden;}
+section#about .information li{width: 100%; font-size: 24px; margin-bottom: 20px;}
+section#about .information li b{width: 20%; float: left; color: #F44A4A; text-align: right;}
+section#about .information span{width: 68%; display: inline-block; padding-left: 70px; position: relative;}
+section#about .information span.p{font-size: 18px; font-weight: 300; position: absolute; top: 38px; left: 10px;}
+
+
+/* skill */
+
+
+section#skill{background-color: #F8F8F8;}
+section#skill h2{text-align: right; margin-bottom: 0;}
+section#skill ul{display: flex;  margin-left: 30px;}
+section#skill ul li{margin-right: 10px; scale: 0.7; margin-bottom: 10px;}
+
+
+/* portfolio */
+
+
+section .pfBG{position: absolute; top: 0; width: 100%; height: 75%; background-color: lime; z-index: -10;}
+section h2{margin-bottom: 30px; margin-top: 0; padding-top: 30px;} 
+
+section .inner{position: relative;}
+section .inner .pf{height: 600px; position: absolute; top: 150px; width: 100%;}
+section .pf .pfText{width: 500px; position: relative; margin-top: 60px; margin-left: 50px;}
+section .pf .pfText p{font-size: 20px; line-height: 40px; font-family: 'Noto Sans KR'; font-weight: 400;}
+section .pf .pfText h3{font-size: 36px; line-height: 60px;}
+section .pf .pfText span{position: absolute; top: 380px; left: 0; width: 500px; height: 60px; line-height: 60px; text-align: center; background-color: #F44A4A; color: #fff; border-radius: 20px; font-size: 26px; font-family: 'Noto Sans KR';}
+section .pf .pfText span a{color: #fff; display: block;}
+
+
+section .pfTL .pfText{text-align: right;}
+section .pfTR .pfText{text-align: left; position: absolute; right: 0;margin-right: 50px;}
+
+section .pf .pfImg{position: absolute; top: 0; right: 0; width: 800px; height: 600px; border-radius: 30px; box-shadow: 0 0 15px rgba(0,0,0,0.4);  transition: 2.5s;}
+section .pf .pfImg:hover{background-position: 0 100%; transition: 2.5s;}
+
+section .pfTR .pfImg{position: absolute; top: 0; left: 0;}
+section#pf1 .pf .pfImg{background-image: url(../img/삼양.png); background-size: cover;}
+section#pf2 .pf .pfImg{background-image: url(../img/네네치킨.png); background-size: cover;}
+section#pf3 .pf .pfImg{background-image: url(../img/씨네큐.png); background-size: cover; box-shadow: none;}
+section#pf4 .pf .pfImg{background-image: url(../img/megabox.png); background-size: cover;}
+section#pf5 .pf .pfImg{background-image: url(../img/한화케미칼.png); background-size: cover;}
+
+
+section#pf1 .pfBG{background-color: #F7F3FA;}
+section#pf2 .pfBG{background-color: #F7F6F4;}
+section#pf3 .pfBG{background-color: #FDE6E7;}
+section#pf4 .pfBG{background-color: #FAF7F3;}
+section#pf5 .pfBG{background-color: #E7EBEA;}
+section#pf5{background-color: #fff; z-index: 1;}
+
+
+/* other design */
+
+
+section#design{position: relative; background: #f9f9f9; overflow: hidden;}
+section#design h2{position: absolute; right: 0; z-index: 10;}
+section#design .detailPage{position: absolute; top: 220px; left: 100px; display: flex; justify-content: space-between; width: 85%; z-index: 10;}
+
+section#design .detailPage div{width: 270px; height: 400px; background-size: cover; cursor: pointer;}
+section#design .detailPage .De1{background-image: url(../img/detail01.jpg);}
+section#design .detailPage .De2{background-image: url(../img/detail02.jpg);}
+section#design .detailPage .De3{background-image: url(../img/detail03.png);}
+section#design .detailPage .De4{background-image: url(../img/detail04.png);}
+
+section#design .detailPage div{transition: 2s; box-shadow: 0 0 10px rgba(0,0,0,0.4);}
+section#design .detailPage div:hover{transition: 2s; background-position-y: 100%;}
+
+section#design .banner{width: 85%; position: absolute; top: 650px; left: 100px; z-index: 10;}
+section#design .banner ul{display: flex; justify-content: space-between}
+section#design .banner ul li{width: 550px; height: 192px;  background-size: contain; box-shadow: 0 0 10px rgba(0,0,0,0.4); display: flex;}
+section#design .banner ul li:nth-child(1){background-image: url(../img/banner01.png); cursor: pointer;}
+section#design .banner ul li:nth-child(2){background-image: url(../img/banner02.png); cursor: pointer;}
+
+
+/* Other Design Popup */
+
+
+section#design .popup div{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 9999999; display: none;}
+
+section#design .popup .popimg1{height: 77%; overflow-y: scroll;}
+section#design .popup .popimg2{height: 77%; overflow-y: scroll;}
+section#design .popup .popimg3{height: 77%; overflow-y: scroll;}
+section#design .popup .popimg4{height: 77%; overflow-y: scroll;}
+
+
+section#design .popup .popbg{width: 100%; height: 100%; background-color:rgba(0,0,0,0.6); z-index: 99999; display: none;}
+section#design .popup .popbg span{position: absolute; bottom:5%; left: 50%; transform: translateX(-50%); font-size: 20px; color: #fff;}
+
+
+section#design{position: relative;}
+
+section#design .inner>ul>li{position: absolute; animation: rotate 30s infinite;}
+section#design .circle{width: 500px; height: 500px; border-radius: 50%; border: 2px dashed #F44A4A; position: absolute; top: -70px; right: -20px; animation: rotate 30s infinite;}
+section#design .inner>ul>li:nth-child(1){top: 120px; right: -250px;}
+section#design .inner>ul>li:nth-child(2){top: 250px; right: 110px;}
+section#design .inner>ul>li:nth-child(3){bottom: 140px; left: -200px;}
+section#design .inner>ul>li:nth-child(4){bottom: 20px; left:10px;}
+
+section#design .inner>ul>li:nth-child(2),
+section#design .inner>ul>li:nth-child(4){animation: roReverse 30s infinite;}
+
+
+/* 원 움직이는 애니메이션 */
+
+
+section#main .inner ul li {
+    animation: rotate 20s infinite linear;
+}
+section#main .inner ul li:nth-child(2),
+section#main .inner ul li:nth-child(4) {
+    animation: roReverse 20s infinite linear;
+}
+
+#fp-nav ul li .fp-tooltip{color:#F44A4A}
+element.style span{color:#F44A4A; background: #F44A4A;}
+
+
